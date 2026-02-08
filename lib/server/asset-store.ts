@@ -130,7 +130,7 @@ async function storeImageToBlob(imageId: string, base64Data: string, sessionId: 
     return {
       id: fileName.split("/").pop()?.split(".")[0] || imageId,
       originalId: imageId,
-      publicPath: uploadedBlob.url,
+      publicPath: uploadedBlob.downloadUrl,
       mimeType,
     }
   } catch (error) {
